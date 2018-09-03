@@ -29,6 +29,12 @@
 \pagestyle{empty} % Suppress page numbers
 
 %----------------------------------------------------------------------------------------
+% COLOR DEFINITION
+%----------------------------------------------------------------------------------------
+\usepackage{xcolor}
+\definecolor{blue}{rgb}{0.22,0.45,0.70}% light blue
+
+%----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
 %----------------------------------------------------------------------------------------
 
@@ -95,9 +101,9 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
-  \MakeUppercase{\bf #1} % Section title
+  {\color{blue}\MakeUppercase{\bf #1}} % Section title
   \sectionlineskip
-  \hrule % Horizontal line
+  {\color{blue}\hrule} % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{1.5em} % Margin within the section
   }
@@ -121,6 +127,18 @@
   }{
   \end{list}
   \vspace{0.5em} % Some space after the list of bullet points
+}
+
+%----------------------------------------------------------------------------------------
+% LIST FORMATTING
+%----------------------------------------------------------------------------------------
+\newenvironment{rItem}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\textbf{#1}} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {#3} \hfill {\textit{#4}} % Italic job title and location
+  }
+  \\
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
