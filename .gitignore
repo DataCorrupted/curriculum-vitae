@@ -1,2 +1,5 @@
 cv.*
 !cv.tex
+resume.*
+!resume.cls
+!resume.tex
