@@ -1,5 +1,5 @@
 cv.*
 !cv.tex
-resume.*
+resume_*
 !resume.cls
-!resume.tex
+!resume_*.tex

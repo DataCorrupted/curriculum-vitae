@@ -22,6 +22,7 @@
 
 \LoadClass[11pt,letterpaper]{report} % Font size and paper type
 
+\usepackage[UTF8]{ctex}
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
