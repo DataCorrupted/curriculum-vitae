@@ -74,7 +74,7 @@
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{\namesize\bf \@name}\hfil
+    \hfil{{\color{blue}\namesize\bf \@name}}\hfil
     \nameskip\break
   \endgroup
 }
@@ -106,7 +106,7 @@
   \sectionlineskip
   {\color{blue}\hrule} % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{1.5em} % Margin within the section
+    \setlength{\leftmargin}{1em} % Margin within the section
   }
   \item[]
 }{
@@ -124,10 +124,10 @@
   {\em #3} \hfill {\em #4} % Italic job title and location
   }\smallskip
   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+   \itemsep -0.7em \vspace{-0.7em} % Compress items in list together for aesthetics
   }{
   \end{list}
-  \vspace{0.25em} % Some space after the list of bullet points
+  \vspace{0.05em} % Some space after the list of bullet points
 }
 
 %----------------------------------------------------------------------------------------
@@ -145,6 +145,6 @@
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
 \def\namesize{\huge} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
-\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
+\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section 
 \def\nameskip{\bigskip} % The space after your name at the top
-\def\sectionskip{\medskip} % The space after the heading section
+\def\sectionskip{\smallskip} % The space after the heading section
