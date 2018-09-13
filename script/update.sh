@@ -15,9 +15,9 @@ echo
 echo "Update successful, compiling"
 echo
 
-./compile-latex.sh resume_eng
-./compile-latex.sh resume_chn
-./compile-latex.sh cv
+./script/compile-latex.sh resume_eng
+./script/compile-latex.sh resume_chn
+./script/compile-latex.sh cv
 
 echo "Done."
 echo
