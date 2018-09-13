@@ -14,12 +14,8 @@ Contains two utility I wrote to compile latex.
 
 	./script/compile-latex.sh <file-name-without-suffix>
 
-will compile _<file-name-without-suffix>.tex_ and put result in _pdf/<file-name-without-suffix>.pdf_
+will compile _<file-name-without-suffix>.tex_ and put result in _../cv-pdf/<file-name-without-suffix>.pdf_
 
 	./script/update.sh
 
 will update the git and compile all of the files.
-
-## pdf
-
-A _.keep_ is stored inside. All compiled file can be found here.
