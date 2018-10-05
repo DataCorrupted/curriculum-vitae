@@ -108,6 +108,7 @@
   {\color{blue}\hrule} % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{1em} % Margin within the section
+    \itemsep -0.5em \vspace{-0.5em}
   }
   \item[]
 }{
