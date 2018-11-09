@@ -113,6 +113,7 @@
   \item[]
 }{
   \end{list}
+  \vspace{-0.5em}
 }
 
 %----------------------------------------------------------------------------------------
@@ -130,7 +131,7 @@
    \itemsep -0.7em \vspace{-0.7em} % Compress items in list together for aesthetics
   }{
   \end{list}
-  \vspace{0.05em} % Some space after the list of bullet points
+  \vspace{-0.2em} % Some space after the list of bullet points
 }
 
 %----------------------------------------------------------------------------------------
