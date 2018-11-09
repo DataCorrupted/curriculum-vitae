@@ -3,3 +3,4 @@ cv.*
 resume_*
 !resume.cls
 !resume_*.tex
+!*.pdf
