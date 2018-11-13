@@ -58,5 +58,7 @@ then
 	./script/compile-latex.sh cv
 fi
 
+cp pdf ../pdf -rf
+
 echo "Done."
 echo

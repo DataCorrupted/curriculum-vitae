@@ -16,6 +16,6 @@ Contains two utility I wrote to compile latex.
 
 will compile _<file-name-without-suffix>.tex_ and put result in _../cv-pdf/<file-name-without-suffix>.pdf_
 
-	./script/update.sh
+	./script/update.sh --help
 
-will update the git and compile all of the files.
+will shows you how to use it for auto update and compile.
