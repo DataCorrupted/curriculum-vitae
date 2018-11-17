@@ -1,6 +1,5 @@
-cv.*
-!cv.tex
-resume_*
-!resume.cls
-!resume_*.tex
 !*.pdf
+src/*
+!src/cv.tex
+!src/resume.cls
+!src/resume_*.tex
