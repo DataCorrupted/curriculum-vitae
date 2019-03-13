@@ -1,5 +1,1 @@
-!*.pdf
-src/*
-!src/cv.tex
-!src/resume.cls
-!src/resume_*.tex
+*.pdf
