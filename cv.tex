@@ -15,6 +15,9 @@
 % document.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\lang{eng}
+\def\eng{eng}
+\def\chn{chn}
 
 %----------------------------------------------------------------------------------------
 %   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
@@ -23,169 +26,55 @@
 
 \usepackage[left=0.7in,top=0.5in,right=0.7in,bottom=0.5in]{geometry} % Document margins
 \usepackage[english]{babel}
+\usepackage{comment}
 
-\name{Yuyang(Peter) Rong} % Your name
-\address{393 Mid Huaxia Rd \\ Shanghai, China 201201} % Your address
-% \address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
-\address{(+86)177~$\cdot$~2105~$\cdot$~4096 \\ PeterRong96@gmail.com \\ \href{PeterRong.netlify.com}{PeterRong.netlify.com}} % Your phone number and email 
-\address{Last updated: \selectlanguage{english}\today}
+\input{header}
 
 \begin{document}
 
 %----------------------------------------------------------------------------------------
 %   EDUCATION SECTION
 %----------------------------------------------------------------------------------------
-
 \begin{rSection}{Education}
-
-\begin{rSubsection}
-  {ShanghaiTech University}{Aug 2015 - Present}{Computer Science}{Shanghai, China}
-    \item \textbf{Overall GPA 3.80/4(Ranking: 5/124)};
-    \item Major GPA 3.90/4(Self-calculated data, ShanghaiTech keeps no official record of major related GPA);
-    \item Elected 5 graduate level courses; got A in \textbf{Systems Programming with Rust}, \textbf{OS II} and \textbf{Robotics}.
-\end{rSubsection}
-
-%%------------------------------------------------
-%
-%\begin{rSubsection}
-%  {University of Chicago}{Jul 2016 - Aug 2016}{General Study}{Chicago, IL}
-%    \item Intensive English \& Statistics, got A in both.
-%\end{rSubsection}
+	\input{education/ShanghaiTech}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
 %   RESEARCH
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Research}
-
-\begin{rSubsection}
-  {CSST, UCLA}{Jul 2018 - Sept 2018}{Summer Intern}{Los Angeles, CA}
-    \item Supervised by Prof. Lixia Zhang; I worked on \textbf{Named Data Networking(NDN)}; 
-    \item Focused on OpenmHealth. Updated it with a new identity manager utilizing NDNCERT;
-    \item I taught myself Android development and updated the application in two months. Java and C++ used;
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}
-  {ShanghaiTech}{Nov 2017 - Jun 2018}{Lab Intern}{Shanghai, China}
-    \item \textbf{\textit{An Inexact First-order Method for Constrained Nonlinear Optimization}} submitted to \textit{SIAM Journal on Optimization}(Currently under review);
-    \item By combining line search and trust region, I designed our subproblem algorithm;
-    \item I implemented our algorithm and subproblem algorithm using Python and did an extensive experiment on them;
-    \item Session Chair to present in MOPTA18 at Lehigh University: \textit{Nonlinear Optimization Methods}.
-    
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}
-  {STAR Lab, ShanghaiTech}{Jun 2017 - Sept 2017}{Lab Intern}{Shanghai, China}
-    \item Supervised by Prof. Sören Schwertfeger in STAR Lab(Now MARS Lab);
-    \item Investigated on \textbf{multi-robot mapping} to help fasten mapping process;
-    \item Used VLP16, tried Gmapping, Cartographer and our modified version.
-\end{rSubsection}
-
+	\input{experience/CSST@UCLA}
+	\input{experience/MOPTA18}
+	\input{experience/STAR}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
 %   EMPLOYMENT
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Employment}
-
-\begin{rSubsection}
-  {Toutiao, Bytedance}{Step 2018 – Present}{Research Intern}{Beijing, China}
-    \item Security Lab lead by Prof. Hao Chen, my work is based on \textbf{Angora fuzzer};
-    \item My work focus on triggering constrained integer overflow by instrumenting source code using \textbf{LLVM};
-    \item Involving \textbf{Rust, C, and C++ coding}.
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}
-  {ABB Group}{Oct 2017 – Jul 2018}{Research Intern}{Shanghai, China}
-    \item Group of 10, Tried to combine robot arm and an indoor mobile car;
-    \item I was responsible for software development, including \textbf{navigation system} \& \textbf{state machine} to switch states when executing an order;
-    \item Python, C++ and Robot Operating System(ROS) used.
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}
-  {Bookends}{June 2017 - Sept 2017}{Marketing Intern}{Shanghai, China}
-    \item \textit{Bookends} is a startup company focusing on kid's education;
-    \item Helped understand the children education market;
-    \item Established a financial model with pricing for the company.
-\end{rSubsection}
-
+	\input{experience/Bytedance}
+	\input{experience/ABB}
+	\input{experience/Bookends}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
 %   PROJECTS
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Project Highlights}
-
-\begin{rSubsection}
-  {Screen++}{Jun 2017}{Team leader}{Shanghai, China}
-    \item Proposed an application to connect all the screens in different platforms;
-    \item I was responsible for the software development \& market model; I also did the final presentation;
-    \item Python \& Apache used. In a group of 5 we won the \textbf{3rd prize} in iLab Hackathon.
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}
-  {SafeBox}{May 2017}{Team member}{Shanghai, China}
-    \item Course project for graduate level Operating System, group of 2;
-    \item We implemented a visualization technology to create a sandbox;
-    \item Using \textit{\textbf{ptrace}}, we catch every system call and fail the ones that we consider unsafe.
-    \item Rust \& C used on Linux.
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}
-  {iGEM}{Jul 2016}{Team member}{Shanghai, China}
-    \item Group of 16, \textbf{Silver Metal}, we focused on intestinal disease;
-    \item I wrote the web page and poster.
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}
-  {SafeHub}{Jul 2016}{Team leader}{Shanghai, China}
-    \item Course project for \textit{Design Thinking}, best design in that course;
-    \item In a group of 5, our team was concerned about the safety of the elderly when taking a bath;
-    \item We designed a bathtub in which people cannot slip.
-\end{rSubsection}
+	\input{projects/Screen++}
+	\input{projects/SafeBox}
+	\input{projects/iGEM}
+	\input{projects/SafeHub}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
 %   TEACHING
 %----------------------------------------------------------------------------------------
-
-\begin{rSection}{Teaching Experience}
-    \rItem
-      {CS110: Computer Architecture I }{ 2018 Spring }
-      {Leading Teaching Assistant}{ShanghaiTech}
-    \rItem
-      {SI100C: Introduction to Computer Science }{ 2017 Fall }
-      {Leading Teaching Assistant}{ShanghaiTech}
-    \rItem
-      {SI100: Introduction to Information Science and Technology }{ 2017 Spring }
-      {Teaching Assistant}{ShanghaiTech}
-    \rItem
-      {CS100: Introduction to Programming }{ 2016 Fall }
-      {Teaching Assistant}{ShanghaiTech}
-\end{rSection}
-\vspace{-1.75em}
+\input{teaching}
 
 %----------------------------------------------------------------------------------------
 %   AWARDS
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Awards}
-    \rItem{Outstanding Student}{Nov 2017}{}{}
-    \rItem{ShanghaiTech President's Scholarship}{Nov 2016}{}{}
-    \rItem{Shanghai Scholarship}{Oct 2016}{}{}
-\end{rSection}
+\input{awards}
 
 \end{document}

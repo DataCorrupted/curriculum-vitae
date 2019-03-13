@@ -16,98 +16,47 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\def\lang{chn}
+\def\eng{eng}
+\def\chn{chn}
+
 %----------------------------------------------------------------------------------------
 %   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 \documentclass{resume} % Use the custom resume.cls style
 \usepackage[left=0.7in,top=0.5in,right=0.7in,bottom=0.5in]{geometry} % Document margins
+\usepackage{comment}
 
-\name{荣宇阳} % Your name
-\address{中国上海，华夏中路393号，201201} % Your address
-% \address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
-\address{(+86)177~$\cdot$~2105~$\cdot$~4096 \\ PeterRong96@gmail.com \\ \href{PeterRong.netlify.com}{PeterRong.netlify.com}} % Your phone number and email
-\address{最后更新于： \today}
+\input{header}
 
 \begin{document}
 
 %----------------------------------------------------------------------------------------
 %   EDUCATION SECTION
 %----------------------------------------------------------------------------------------
-
 \begin{rSection}{教育经历}
-
-\begin{rSubsection}
-  {上海科技大学}{2015.8 - 现在}{计算机科学}{中国，上海}
-    \item \textbf{总 GPA 3.80/4(排名 5/124)}；
-    \item 专业 GPA 3.90/4(自行计算所得，上科大不提供官方专业GPA数据)；
-    \item 在校选修5门研究生课程；其中\textbf{Rust与系统编程}，\textbf{操作系统II}与\textbf{机器人}成绩为A。
-\end{rSubsection}
-
+	\input{education/ShanghaiTech}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
 %   EXPERIENCE
 %----------------------------------------------------------------------------------------
 \begin{rSection}{实习经历}
-
-\begin{rSubsection}
-  {今日头条, 字节跳动}{2018.9 – 现在}{安全实验室实习生}{中国，北京}
-    \item 在Hao Chen教授的指导下在头条安全实验室工作, 主要工作是在\textbf{模糊测试器 Angora}上做开发；
-    \item 我的工作目前集中在有约束的情况下触发整数溢出漏洞，我们使用\textbf{LLVM}来给源码插桩；
-    \item 项目中使用\textbf{Rust， C与C++}。
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}
-  {CSST, 加州大学洛杉矶分校}{2018.7 - 2018.9}{暑研实习生}{加利福尼亚，洛杉矶}
-    \item 受Lixia Zhang教授指导，研究\textbf{命名数据网络（Named Data Networking）}相关应用；
-    \item 重心在OpenmHealth，通过使用NDNCERT重写身份管理模块来升级现有构架；
-    \item 我在两个月内自学了Android开发并升级了现有app。 在此过程中使用了Java与C++。
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}
-  {ABB集团}{2017.10 – 2018.7}{研发实习生}{中国，上海}
-    \item 十人团队，致力于整合ABB产品Yumi与室内移动机器人；
-    \item 负责软件开发，包括\textbf{导航系统}、\textbf{建图系统}与\textbf{状态机}；
-    \item 使用Python, C++ 和 ROS。
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}
-  {Screen++}{2017.6}{队长}{中国，上海}
-    \item 提出了在不同平台与设备之间分享屏幕的想法；
-    \item 实际参与开发与市场模型的构建，并完成了最终展示；
-    \item 使用Python \& Apache，五人团队并最终获得iLab黑客马拉松\textbf{三等奖}。
-\end{rSubsection}
-
+	\input{experience/Bytedance}
+	\input{experience/CSST@UCLA}
+	\input{experience/ABB}
+	\input{projects/Screen++}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
 %   AWARDS
 %----------------------------------------------------------------------------------------
-\begin{rSection}{获奖情况}
-    \rItem{三好学生}{2017.11}{}{}
-    \rItem{上海科技大学校长奖学金}{2016.11}{}{}
-    \rItem{上海奖学金}{2016.10}{}{}
-\end{rSection}
-\vspace{-1em}
+\input{awards}
 
 %----------------------------------------------------------------------------------------
 %   TECHNICAL STRENGTHS SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{技能}
-
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-语言 & 中文, 英语（熟练使用） \\
-编程语言 & Rust, Java, C++, C, Python, MATLAB\\
-工具与接口 & LLVM, Android, boost, ROS, numpy \\
-\end{tabular}
-
-\end{rSection}
+\input{skills}
 
 \end{document}
