@@ -33,8 +33,9 @@
 %----------------------------------------------------------------------------------------
 % COLOR DEFINITION
 %----------------------------------------------------------------------------------------
-\usepackage{xcolor}
-\definecolor{blue}{rgb}{0.22,0.45,0.70}% light blue
+% Not using blue anymore
+% \usepackage{xcolor}
+% \definecolor{blue}{rgb}{0.22,0.45,0.70}% light blue
 
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
@@ -75,7 +76,7 @@
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{{\color{blue}\namesize\bf \@name}}\hfil
+    \hfil{\namesize\bf \@name}\hfil
     \nameskip\break
   \endgroup
 }
@@ -103,9 +104,9 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
-  {\color{blue}\MakeUppercase{\bf #1}} % Section title
+  \MakeUppercase{\bf #1} % Section title
   \sectionlineskip
-  {\color{blue}\hrule} % Horizontal line
+  \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{1em} % Margin within the section
     \itemsep -0.5em \vspace{-0.5em}
