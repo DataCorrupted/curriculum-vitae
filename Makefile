@@ -1,3 +1,4 @@
+PREFIX=$(shell pwd)
 ifeq ($(OS),Windows_NT)
 	PDFVIEWER=chrome
 else
@@ -9,17 +10,17 @@ all: cv resume_chn resume_eng clean
 cv: cv.tex
 	latex $<
 	dvipdfm cv.dvi
-	$(PDFVIEWER) cv.pdf &
+	$(PDFVIEWER) $(PREFIX)/cv.pdf &
 
 resume_eng: resume_eng.tex
 	latex $<
 	dvipdfm resume_eng.dvi
-	$(PDFVIEWER) resume_eng.pdf &
+	$(PDFVIEWER) $(PREFIX)/resume_eng.pdf &
 
 resume_chn: resume_chn.tex
 	latex $<
 	dvipdfm resume_chn.dvi
-	$(PDFVIEWER) resume_chn.pdf &
+	$(PDFVIEWER) $(PREFIX)/resume_chn.pdf &
 
 clean:
 	rm *.log *.aux *.dvi *.out
