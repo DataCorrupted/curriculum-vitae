@@ -1,0 +1,16 @@
+\renewcommand{\timeInterval}{\DTMdisplaydate{2018}{9}{18}{-1} - \DTMdisplaydate{2019}{8}{27}{-1}}
+
+\ifx\lang\eng
+	\begin{rSubsection}{Bytedance}{\timeInterval}{Research Intern}{Beijing, China}
+		\item Security Lab lead by Prof. Hao Chen, main work focuses on integer overflow;
+		\item Main focus on integer overflow, we trigger constrained integer overflow by instrumenting source code using \textbf{LLVM};
+		\item \textit{\textbf{IntEgrity: finding integer errors by targeted fuzzing}} published on SecureComm 2020;
+	\end{rSubsection}
+\else
+	\begin{rSubsection}{字节跳动}{\timeInterval}{安全实验室实习生}{中国，北京}
+		\item 主要工作集中在研究整数溢出的检查并触发整数溢出漏洞，使用\textbf{LLVM}来给源码插桩；
+		\item \textit{\textbf{IntEgrity: finding integer errors by targeted fuzzing}} published on SecureComm 2020;
+	\end{rSubsection}
+\fi
+
+\renewcommand{\timeInterval}{}

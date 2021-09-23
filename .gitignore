@@ -1,1 +1,4 @@
 *.log
+*.fls
+*.fdb_latexmk
+*latexindent*

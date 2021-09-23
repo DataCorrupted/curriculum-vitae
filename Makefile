@@ -8,19 +8,16 @@ endif
 all: cv resume_chn resume_eng clean
 
 cv: cv.tex
-	latex $<
-	dvipdfm cv.dvi
+	pdflatex $<
 	$(PDFVIEWER) $(PREFIX)/cv.pdf &
 
 resume_eng: resume_eng.tex
-	latex $<
-	dvipdfm resume_eng.dvi
+	pdflatex $<
 	$(PDFVIEWER) $(PREFIX)/resume_eng.pdf &
 
 resume_chn: resume_chn.tex
-	latex $<
-	dvipdfm resume_chn.dvi
+	pdflatex $<
 	$(PDFVIEWER) $(PREFIX)/resume_chn.pdf &
 
 clean:
-	rm *.log *.aux *.dvi *.out
+	rm *.log *.aux *.dvi *.out -rf
