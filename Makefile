@@ -8,15 +8,15 @@ endif
 all: cv resume_chn resume_eng clean
 
 cv: cv.tex
-	pdflatex $<
+	xelatex $<
 	$(PDFVIEWER) $(PREFIX)/cv.pdf &
 
 resume_eng: resume_eng.tex
-	pdflatex $<
+	xelatex $<
 	$(PDFVIEWER) $(PREFIX)/resume_eng.pdf &
 
 resume_chn: resume_chn.tex
-	pdflatex $<
+	xelatex $<
 	$(PDFVIEWER) $(PREFIX)/resume_chn.pdf &
 
 clean:
