@@ -26,7 +26,6 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
-\usepackage{hyperref}
 
 \pagestyle{empty} % Suppress page numbers
 
@@ -34,8 +33,8 @@
 % COLOR DEFINITION
 %----------------------------------------------------------------------------------------
 % Not using blue anymore
-% \usepackage{xcolor}
-% \definecolor{blue}{rgb}{0.22,0.45,0.70}% light blue
+\usepackage{xcolor}
+\definecolor{blue}{rgb}{0.22,0.45,0.70}% light blue
 
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address

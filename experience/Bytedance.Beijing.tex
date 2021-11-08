@@ -2,9 +2,11 @@
 
 \ifx\lang\eng
 	\begin{rSubsection}{Bytedance}{\timeInterval}{Research Intern}{Beijing, China}
-		\item Security Lab lead by Prof. Hao Chen, main work focuses on integer overflow;
-		\item Main focus on integer overflow, we trigger constrained integer overflow by instrumenting source code using \textbf{LLVM};
-		\item \textit{\textbf{IntEgrity: finding integer errors by targeted fuzzing}} published on SecureComm 2020;
+		\item I was assigned to find integer errors in Bytedance's codebase.
+		\item I designed a sanitizer and implemented it as a runtime plugin using around 1500 lines C++ and 2000 lines of Rust.
+		\item Identified 8 crashing errors that could cause deinal of service attack; \href{https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-18869}{CVE-2020-18869} and \href{https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-18871}{CVE-2020-18871} assigned.
+		\item Found 166 non-crashing errors that could cause program misbehave, reported to developers.
+		\item \textit{\textbf{IntEgrity: finding integer errors by targeted fuzzing}} published on SecureComm 2020.
 	\end{rSubsection}
 \else
 	\begin{rSubsection}{字节跳动}{\timeInterval}{安全实验室实习生}{中国，北京}
