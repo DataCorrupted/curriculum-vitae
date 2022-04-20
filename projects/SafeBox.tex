@@ -1,11 +1,10 @@
 \renewcommand{\timeInterval}{\DTMdisplaydate{2017}{6}{28}{-1} - \DTMdisplaydate{2017}{7}{21}{-1}}
 
 \ifx\lang\eng
-	\begin{rSubsection}{SafeBox}{\timeInterval}{Team member}{Shanghai, China}
-		\item Course project for graduate level Operating System, group of 2;
-		\item Implemented a visualization technology to create a sandbox;
-		\item Using \textit{\textbf{ptrace}}, we catch every system call and fail the ones that we consider unsafe.
-		\item Rust \& C used on Linux.
+	\begin{rSubsection}{SafeBox}{\timeInterval}{CS230 Operating system course project}{ShanghaiTech University}
+		\item Designed an abstraction layer to run untrusted software by intercepting unsafe system calls.
+		\item Implemented the prototype in 1200 lines of Rust, \slink{https://github.com/DataCorrupted/sandbox}{open-sourced}.
+		\item Successfully prevented untrusted submission from accessing Internet in online judge \slink{http://gradebot.org/gradebot/static/user.html}{Gradebot}.
 	\end{rSubsection}
 \fi
 
