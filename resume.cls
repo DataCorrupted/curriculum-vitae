@@ -67,6 +67,7 @@
 \def \printaddress #1{
   \begingroup
     \def \\ {\addressSep\ }
+    % #1
     \centerline{#1}
   \endgroup
   \par
@@ -86,6 +87,21 @@
 %----------------------------------------------------------------------------------------
 
 \let\ori@document=\document
+% Use tabular for left/right format.
+% \renewcommand{\document}{
+%   \ori@document  % Begin document
+%   \begin{tabular}{ll}
+%    \multirow{3}{*}{\printname} & % Print the name specified with \name  
+%   \@ifundefined{@addressone}{}{ % Print the first address if specified
+%     \printaddress{\@addressone}} \\
+%     & 
+%   \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+%     \printaddress{\@addresstwo}} \\
+%     & 
+%   \@ifundefined{@addressthree}{}{ % Print the third address if specified
+%     \printaddress{\@addressthree}}
+%   \end{tabular}
+% }
 \renewcommand{\document}{
   \ori@document  % Begin document
   \printname % Print the name specified with \name
