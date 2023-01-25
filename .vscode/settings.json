@@ -1,0 +1,21 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex",
+            ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xetex",
+            "args": [
+                "-undump=xelatex",
+                "%DOC%.tex"
+            ],
+            "env": {}
+        }
+    ],
+}
