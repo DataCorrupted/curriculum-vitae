@@ -124,12 +124,12 @@
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{1em} % Margin within the section
-    \itemsep -0.5em \vspace{-0.5em}
+    \itemsep -0.6em \vspace{-0.6em}
   }
   \item[]
 }{
   \end{list}
-  \vspace{-0.5em}
+  \vspace{-0.4em}
 }
 
 %----------------------------------------------------------------------------------------
@@ -144,7 +144,7 @@
   }
   %\smallskip
   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.9em \vspace{-0.9em} % Compress items in list together for aesthetics
+   \itemsep -1em \vspace{-1em} % Compress items in list together for aesthetics
   }{
   \end{list}
   \vspace{-0.3em} % Some space after the list of bullet points
