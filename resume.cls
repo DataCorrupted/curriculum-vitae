@@ -55,29 +55,31 @@
   \@ifundefined{@addresstwo}{
     \def \@addresstwo {#1}
   }{
-  \@ifundefined{@addressthree}{
-  \def \@addressthree {#1}
-  }{
-     \def \@addressone {#1}
-  }}
+    \@ifundefined{@addressthree}{
+      \def \@addressthree {#1}
+    }{
+      \def \@addressone {#1}
+    }}
 }
 
 % \printaddress is used to style an address line (given as input)
 \def \printaddress #1{
-  \begingroup
-    \def \\ {\addressSep\ }
-    % #1
-    \centerline{#1}
-  \endgroup
-  \par
-  \addressskip
+\begingroup
+\def \\ {\addressSep\ }
+% #1
+\vspace{-0.5em}
+\centerline{#1}
+\endgroup
+\par
+\addressskip
 }
 
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{\namesize\bf \@name}\hfil
-    \nameskip\break
+  \vspace{-1em}
+  \hfil{\namesize\bf \@name}\hfil
+  \nameskip\break
   \endgroup
 }
 
@@ -108,7 +110,7 @@
     \printaddress{\@addressone}}
   \@ifundefined{@addresstwo}{}{ % Print the second address if specified
     \printaddress{\@addresstwo}}
-     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+  \@ifundefined{@addressthree}{}{ % Print the third address if specified
     \printaddress{\@addressthree}}
 }
 
@@ -119,17 +121,18 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
+  \vspace{-0.1em}
   \MakeUppercase{\bf #1} % Section title
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{1em} % Margin within the section
     \itemsep -0.6em \vspace{-0.6em}
-  }
-  \item[]
-}{
+          }
+    \item[]
+          }{
   \end{list}
-  \vspace{-0.4em}
+  \vspace{-0.5em}
 }
 
 %----------------------------------------------------------------------------------------
@@ -137,29 +140,29 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf #1} \hfill {#2} % Bold company name and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {\em #3} \hfill {\em #4} % Italic job title and location
-  }
-  %\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -1em \vspace{-1em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{-0.3em} % Some space after the list of bullet points
+{\bf #1} \hfill {#2} % Bold company name and date on the right
+\ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+\vspace{-0.2em}\\
+{\em #3} \hfill {\em #4} % Italic job title and location
+}
+%\smallskip
+\begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+  \itemsep -1em \vspace{-1.1em} % Compress items in list together for aesthetics
+        }{
+\end{list}
+\vspace{-0.4em} % Some space after the list of bullet points
 }
 
 %----------------------------------------------------------------------------------------
 % LIST FORMATTING
 %----------------------------------------------------------------------------------------
 \newenvironment{rItem}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\textbf{#1}} \hfill {#2} % Bold company name and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \vspace{-0.2em}\\
-  {#3} \hfill {\textit{#4}} % Italic job title and location
-  }
-  \vspace{-0.2em}\\
+{\textbf{#1}} \hfill {#2} % Bold company name and date on the right
+\ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+\vspace{-0.2em}\\
+{#3} \hfill {\textit{#4}} % Italic job title and location
+}
+\vspace{-0.25em}\\
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
