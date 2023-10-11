@@ -1,0 +1,17 @@
+\renewcommand{\timeInterval}{\DTMdisplaydate{2018}{9}{18}{-1} - \DTMdisplaydate{2019}{8}{27}{-1}}
+
+\ifx\lang\eng
+	\begin{rSubsection}{Bytedance Ltd.}{\timeInterval}{Research Intern}{Beijing, China}
+		\item Assigned to maintain \slink{https://github.com/AngoraFuzzer/Angora}{Angora} and use it to find integer bugs in Bytedance's codebase.
+		\item Implemented a sanitizer as an LLVM pass w/ runtime library using \~{}1500 LoC in C++ and \~{}2000 LoC in Rust.
+		\item Identified \textbf{8 crashing and 166 non-crashing bugs}. \slink{https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-18869}{CVE-2020-18869} and \slink{https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-18871}{CVE-2020-18871} assigned.
+		% \item \textit{\textbf{IntEgrity: finding integer errors by targeted fuzzing}} published on SecureComm 2020.
+	\end{rSubsection}
+\else
+	\begin{rSubsection}{字节跳动}{\timeInterval}{安全实验室实习生}{中国，北京}
+		\item 主要工作集中在研究整数溢出的检查并触发整数溢出漏洞，使用\textbf{LLVM}来给源码插桩；
+		\item \textit{\textbf{IntEgrity: finding integer errors by targeted fuzzing}} published on SecureComm 2020;
+	\end{rSubsection}
+\fi
+
+\renewcommand{\timeInterval}{}
