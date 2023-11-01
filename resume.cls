@@ -150,7 +150,7 @@
   \itemsep -1em \vspace{-1.1em} % Compress items in list together for aesthetics
         }{
 \end{list}
-\vspace{-0.4em} % Some space after the list of bullet points
+\vspace{-0.6em} % Some space after the list of bullet points
 }
 
 %----------------------------------------------------------------------------------------
@@ -162,7 +162,7 @@
 \vspace{-0.2em}\\
 {#3} \hfill {\textit{#4}} % Italic job title and location
 }
-\vspace{-0.25em}\\
+\vspace{-0.3em}\\
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
