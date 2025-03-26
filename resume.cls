@@ -160,7 +160,7 @@
 {\textbf{#1}} \hfill {#2} % Bold company name and date on the right
 \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
 \vspace{-0.2em}\\
-{#3} \hfill {\textit{#4}} % Italic job title and location
+{#3} \hfill {#4}
 }
 \vspace{-0.3em}\\
 }
